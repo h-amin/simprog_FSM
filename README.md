@@ -1,7 +1,8 @@
 # simprog_FSM
 Creating a Finite State Machine simulation based off a simple game AI using python.
 
--------------------------------------------------[GENERAL FLOW]---------------------------------------------------------
+## General flow
+
 1. mob is in IDLE state / mob is in w_route (walking route) state
 2. system recognizes player within 15 m LoS range
 3. mob approaches' player
@@ -13,7 +14,8 @@ Creating a Finite State Machine simulation based off a simple game AI using pyth
 9. mob attacks' player, vice versa
 10. OPTION 1: mob hp down to 0, enter Defeat state
     OPTION 2: player hp down to 0, enter Victory state
------------------------------------------------------[MISC]-------------------------------------------------------------
+
+## Misc
 The program has been modelled in a specific way that does not allow the mob to enter a combat state when the enemy player
 has a higher level than the mob itself. This is process that is handled by the EVALUATION state. Because the code relies
 on levels to decide the result of combat, if the enemy player can never reach a higher level than the mob, in turn never
