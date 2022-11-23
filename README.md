@@ -13,7 +13,7 @@ Creating a Finite State Machine simulation based off a simple game AI using pyth
 8. player in 3 m ccmb_reach (combative reach), enter Combat state
 9. mob attacks' player, vice versa
 10. OPTION 1: mob hp down to 0, enter Defeat state
-    OPTION 2: player hp down to 0, enter Victory state
+11. OPTION 2: player hp down to 0, enter Victory state
 
 ### Misc
 The program has been modelled in a specific way that does not allow the mob to enter a combat state when the enemy player
