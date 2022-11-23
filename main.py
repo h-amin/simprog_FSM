@@ -21,6 +21,7 @@ class Clock:
         background_task = threading.Thread(target=self.background)
         background_task.start()
 
+
 # Player plays an important role in the simulation, because we need to know the lvl and distance of the player in
 # certain states to determine what the next state of the mob should be. In the mob simulation we also needed to simulate
 # the player behaviour, because it is unrealistic to have a player idle all the time, for simulating the players
@@ -36,8 +37,9 @@ class Player:
 
     def turn(self, mob):
         distance = functions.calc_distance(self.position, mob.position)
-        print(f"\nPlayer position: {int(self.position[0])} X, {int(self.position[1])} Y coordinates, mob position: {int(mob.position[0])} X, {int(mob.position[1])} Y."
-              f"distance: {distance} meters")
+        print(
+            f"\nPlayer position: {int(self.position[0])} X, {int(self.position[1])} Y coordinates, mob position: {int(mob.position[0])} X, {int(mob.position[1])} Y."
+            f"distance: {distance} meters")
         # move = int(input("type 0 to move towards mob, type 1 to stay idle, type 2 to run:\n"))
         move = 0
         if move == 0:
@@ -58,6 +60,7 @@ class Player:
         self.hp = 100
         self.lvl += 3
         self.position = [mob.position[0] + 10, mob.position[1] + 10]
+
 
 # Mob is the FSM we wanted to simulate in this project. the mob has an clock, which keeps track of the time the moment
 # when the mob is instantiated. The time is necessary to get out of the Idle, Victory and Defeat state.
