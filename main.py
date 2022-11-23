@@ -3,7 +3,7 @@ import threading
 import time
 import functions
 
-# Clock is used to track the time. CLOCK_SPEED is the amount of time th simulation has passed in 1 second of the
+# Clock is used to track the time. CLOCK_SPEED is the amount of time the simulation has passed in 1 second of the
 # real world time
 CLOCK_SPEED = 2
 
