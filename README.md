@@ -1,7 +1,7 @@
 # FSM: simple game AI
 Creating a Finite State Machine simulation based off a simple game AI using python.
 
-#### General flow
+#### General happy flow
 
 1. mob is in IDLE state / mob is in w_route (walking route) state
 2. system recognizes player within 15 m LoS range
@@ -20,3 +20,5 @@ The program has been modelled in a specific way that does not allow the mob to e
 has a higher level than the mob. This is process that is handled by the EVALUATION state. Because the code relies
 on levels to decide the result of combat, if the enemy player never reaches a level higher than the mob, the simulation will never
 reach a defeat state. Throughout the build process of the program it was realise that the original FSM design had elements that were obsolete.
+
+![](FSM%20image/FSM_game_ai.png)
