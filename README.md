@@ -17,7 +17,6 @@ Creating a Finite State Machine simulation based off a simple game AI using pyth
 
 #### Misc
 The program has been modelled in a specific way that does not allow the mob to enter a combat state when the enemy player
-has a higher level than the mob itself. This is process that is handled by the EVALUATION state. Because the code relies
-on levels to decide the result of combat, if the enemy player can never reach a higher level than the mob, in turn never
-reach a defeat state. Throughout the build process of the program we came to the realisation that the original
-FMA design had elements that are obsolete.
+has a higher level than the mob. This is process that is handled by the EVALUATION state. Because the code relies
+on levels to decide the result of combat, if the enemy player never reaches a level higher than the mob, the simulation will never
+reach a defeat state. Throughout the build process of the program it was realise that the original FSM design had elements that were obsolete.
