@@ -21,4 +21,4 @@ has a higher level than the mob. This is process that is handled by the EVALUATI
 on levels to decide the result of combat, if the enemy player never reaches a level higher than the mob, the simulation will never
 reach a defeat state. Throughout the build process of the program it was realise that the original FSM design had elements that were obsolete.
 
-![](FSM%20image/FSM_game_ai.png)
+![](images/FSM.png)
