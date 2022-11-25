@@ -1,7 +1,7 @@
 # FSM: simple game AI
 Creating a Finite State Machine simulation based off a simple game AI using python.
 
-#### General flow
+#### General happy flow
 
 1. mob is in IDLE state / mob is in w_route (walking route) state
 2. system recognizes player within 15 m LoS range
