@@ -56,7 +56,7 @@ def walk_transitions(mob, player):
     mob.current_state = "WALK"
     mob.summary(player)
     if player in player_list:
-        # we didnt have time to make a nice walking route, so we decided moves 1 to the right
+        # no time to make a nice walking route, so currently it moves 1 to the right
         mob.position = [mob.position[0] + 1, 0]
         return "WALK"
     elif calc_distance(mob.position, player.position) <= 15:
@@ -65,7 +65,7 @@ def walk_transitions(mob, player):
         return "WALK"
 
 
-# Respawn function that will restore the mob hitpoints and revert back into the IDLE state and x0, y0 coordinates.
+# Respawn function that will restore the mob hit points and revert into the IDLE state and x0, y0 coordinates.
 def respawn_transitions(mob, player):
     mob.current_state = "RESPAWN"
     mob.summary(player)
@@ -100,7 +100,7 @@ def victory_transitions(mob, player):
 
 
 # AGGRO state function that will transition the current state into COMBAT state if the below 3 meters condition has
-# has been met, if this isn't the case, repeat AGGRO state.
+# been met, if this isn't the case, repeat AGGRO state.
 def aggro_transitions(mob, player):
     mob.current_state = "AGGRO"
     mob.summary(player)
@@ -123,16 +123,16 @@ def eval_transitions(mob, player):
         return walk_transitions(mob, player)
 
 
-# BoT state function that will transition the current state into the WALK state.
+# BoT (Back on Track) state function that will transition the current state into the WALK state.
 def bot_transitions(mob, player):
     mob.current_state = "BOT"
     mob.summary(player)
     return walk_transitions(mob, player)
 
 
-# PLAYER_APPROACH state function that calculates the distance between mob position and player position.
-# If the delta distance between mob and player <= 5 meters, enter EVAL state, if the delta distance is bigger than 15 m
-# enter BoT state. Should the above mentioned conditions not be met, return the move_towards_player function.
+# PLAYER_APPROACH state function that calculates the distance between mob position and player position. If the delta
+# distance between mob and player <= 5 meters, enter EVAL state, if the delta distance is bigger than 15 m enter BoT
+# (Back on Track) state. Should the mentioned conditions not be met, return the move_towards_player function.
 def player_approach_transitions(mob, player):
     mob.current_state = "PLAYER_APPROACH"
     mob.summary(player)

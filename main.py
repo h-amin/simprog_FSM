@@ -25,7 +25,7 @@ class Clock:
 # Player plays an important role in the simulation, because we need to know the lvl and distance of the player in
 # certain states to determine what the next state of the mob should be. In the mob simulation we also needed to simulate
 # the player behaviour, because it is unrealistic to have a player idle all the time, for simulating the players
-# there are 2 options, one is to handle the player behaviour by ourself by providing input, the other is to hardcode
+# there are 2 options, one is to handle the player behaviour by ourselves by providing input, the other is to hardcode
 # behaviour of the player. To keep it simple at every turn, the player moves 1 unit vector towards the mob.
 
 
