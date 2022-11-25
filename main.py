@@ -22,7 +22,7 @@ class Clock:
         background_task.start()
 
 
-# Player plays an important role in the simulation, because we need to know the lvl and distance of the player in
+# Player plays an important role in the simulation, because it is required to know the lvl and distance of the player in
 # certain states to determine what the next state of the mob should be. In the mob simulation we also needed to simulate
 # the player behaviour, because it is unrealistic to have a player idle all the time, for simulating the players
 # there are 2 options, one is to handle the player behaviour by ourselves by providing input, the other is to hardcode
@@ -43,10 +43,10 @@ class Player:
         # move = int(input("type 0 to move towards mob, type 1 to stay idle, type 2 to run:\n"))
         move = 0
         if move == 0:
-            # 1 stap van een speler is 1 meter, dus 1 meter richting mob
+            # 1 step of the player is 1 meter, thus 1 meter approaching the mob.
             time.sleep(1)
             dx, dy = (mob.position[0] - self.position[0], mob.position[1] - self.position[1])
-            # unit vector van de directional vector
+            # unit vector of the directional vector
             udx, udy = (dx / distance, dy / distance)
             self.position[0] = self.position[0] + udx
             self.position[1] = self.position[1] + udy
@@ -62,10 +62,10 @@ class Player:
         self.position = [mob.position[0] + 10, mob.position[1] + 10]
 
 
-# Mob is the FSM we wanted to simulate in this project. the mob has an clock, which keeps track of the time the moment
-# when the mob is instantiated. The time is necessary to get out of the Idle, Victory and Defeat state.
-# The start state of the FSM is the Idle state, there is no end state. The simulation will end in 100 seconds
-# (in clock time of the mob, not real world) after the player has a higher lvl then the mob
+# The course of mob's actions is the FSM that had to be simulated. The mob has a clock, which keeps track of the time
+# the moment when the mob is instantiated. The time is necessary to get out of the Idle, Victory and Defeat state.
+# The start state of the FSM is the Idle state, there is no end state. The simulation will end in 100 seconds (in
+# clock time of the mob, not real world) after the player has a higher lvl then the mob
 
 
 class MobStateMachine:

@@ -88,7 +88,7 @@ def regen_transitions(mob, player):
     return bot_transitions(mob, player)
 
 
-# VICTORY state function that will transition the current state into the REGEN state if the 3 second interval condition
+# VICTORY state function that will transition the current state into the REGEN state if the 3-second interval condition
 # has been met, if this isn't the case, repeat VICTORY state.
 def victory_transitions(mob, player):
     mob.current_state = "VICTORY"
